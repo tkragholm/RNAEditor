@@ -5,9 +5,8 @@ Created on Apr 16, 2013
 
 @author: david
 """
-import argparse, os
-from string import split
-
+import argparse
+import os
 
 parser = argparse.ArgumentParser(description='Merge tables.')
 parser.add_argument('-f', '--files', metavar='N', type=str, nargs='+', help='the list of files', required=True)

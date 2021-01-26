@@ -4,9 +4,10 @@ Created on Nov 30, 2015
 @author: david
 """
 import argparse
-from Helper import Helper
 import os
 from collections import OrderedDict
+
+from Helper import Helper
 
 
 class Stats:

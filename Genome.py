@@ -7,17 +7,17 @@ Created on 11.06.2014
 classdocs
 '''
 
+import gzip
 # from __builtin__ import SyntaxError
 from array import array
 from collections import defaultdict
-import gzip
 # from itertools import izip
 from operator import attrgetter
 
+import gtfHandler
 from Gene import Gene
 from Helper import Helper
 from Transcript import Transcript
-import gtfHandler
 
 
 class Genome(object):

@@ -6,16 +6,17 @@
     @author: david
 '''
 
+import argparse
+import os
+import subprocess
+import sys
+import textwrap
+
+from PyQt4 import QtGui, QtCore
+
+from CallEditingSites import CallEditingSites
 from Helper import Helper, Parameters
 from MapFastq import MapFastq
-from CallEditingSites import CallEditingSites
-import multiprocessing, argparse, os
-import traceback
-from PyQt4 import QtGui, QtCore
-import textwrap
-import sys
-import gc
-import subprocess
 
 
 class RnaEdit(QtCore.QThread):

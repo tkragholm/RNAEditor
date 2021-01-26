@@ -1,7 +1,8 @@
 from PyQt4 import QtCore, QtGui
-from ui.InputTab import InputTab
 from PyQt4.QtGui import QSizePolicy
+
 from ui.GuiControll import GuiControll
+from ui.InputTab import InputTab
 
 
 class GuiView(QtGui.QMainWindow):
