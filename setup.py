@@ -8,17 +8,20 @@ Usage (Windows):
     python setup.py py2exe
 
 Usage (Linux):
-    python sytup.py install
+    python setup.py install
 """
 from __future__ import print_function
+
+import sys
+
 from setuptools import setup, find_packages
-import io, sys, codecs, os
 
 mainscript = 'RNAEditor.py'
-name="RNAEditor"
-OPTIONS = {'iconfile': 'ui/icons/rnaEditor.icns','plist': {'CFBundleShortVersionString':'0.1.0'}
-}
-DATA_FILES = ['ui/icons/rnaEditor_icon.pdf','ui/icons/RNAeditor.png','ui/icons/rnaEditor_icon.svg','configuration.txt','ui/icons/inputTab_icon.png']
+name = "RNAEditor"
+OPTIONS = {'iconfile': 'ui/icons/rnaEditor.icns', 'plist': {'CFBundleShortVersionString': '0.1.0'}
+           }
+DATA_FILES = ['ui/icons/rnaEditor_icon.pdf', 'ui/icons/RNAeditor.png', 'ui/icons/rnaEditor_icon.svg',
+              'configuration.txt', 'ui/icons/inputTab_icon.png']
 
 if sys.platform == 'darwin':
     extra_options = dict(
@@ -56,4 +59,3 @@ setup(
     install_requires=['numpy>=1.9.0', 'pysam>=0.9.0', 'matplotlib>=1.4.3'],
     **extra_options
 )
-

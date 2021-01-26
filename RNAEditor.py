@@ -56,13 +56,13 @@ class RnaEdit(QtCore.QThread):
             #output=/path/to/output/rnaEditor/samplename/samplename
             self.params.output=self.outdir+self.sampleName
             if not os.path.exists(self.outdir):
-                os.makedirs(self.outdir, mode=0755)
-                os.chmod(self.outdir, 0755)
+                os.makedirs(self.outdir, mode=0o755)
+                os.chmod(self.outdir, 0o755)
 
             #create folder for html output
             if not os.path.exists(self.outdir+"/html"):
-                os.makedirs(self.outdir+"/html", mode=0755)
-                os.chmod(self.outdir, 0755)
+                os.makedirs(self.outdir +"/html", mode=0o755)
+                os.chmod(self.outdir, 0o755)
         
         
         self.checkDependencies()
@@ -76,7 +76,7 @@ class RnaEdit(QtCore.QThread):
         except Exception:
             Helper.error("RnaEditor Failed",self.logFile,self.textField)
         
-        """ At this point the RnaEditor has succesfully finished """
+        """ At this point the RnaEditor has successfully finished """
         fileDir = os.path.dirname(os.path.realpath(__file__))
         cmd=["python",fileDir+"/createDiagrams.py","-o", self.params.output]
         a=subprocess.call(cmd)
