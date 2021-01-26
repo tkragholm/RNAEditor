@@ -1,10 +1,10 @@
 #!/usr/bin/python
-'''
+"""
 this script merges all the given files on an specific column
 Created on Apr 16, 2013
 
 @author: david
-'''
+"""
 import argparse, os
 from string import split
 
@@ -19,7 +19,7 @@ parser.add_argument('-e', '--empty', metavar='N', type=str, help='Sign for empty
 args = parser.parse_args()
 
 idDict = {}
-if args.top==None:
+if args.top is None:
     header=[] 
     for file in args.files:
         header.append(os.path.basename(file))
